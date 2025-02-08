@@ -1,28 +1,28 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from '@/pages/Home'
-import About from '@/pages/About'
-import Projects from '@/pages/Projects'
-import NotFound from '@/pages/NotFound'
+import HomePage from '@/pages/HomePage'
+import AboutPage from '@/pages/AboutPage'
+import ProjectsPage from '@/pages/ProjectsPage'
+import NotFoundPage from '@/pages/NotFoundPage'
 
 export default function Router(): React.JSX.Element {
   return (
     <Routes>
       <Route
         path='/'
-        element={<Home />}
+        element={<HomePage />}
       />
       <Route
         path='/projects'
-        element={<Projects />}
+        element={<ProjectsPage />}
       />
       <Route
         path='/about'
-        element={<About />}
+        element={<AboutPage />}
       />
       <Route
         path='/*'
-        element={<NotFound />}
+        element={<NotFoundPage />}
       />
     </Routes>
   )
