@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import ButtonProps from '@/types/components/ButtonProps'
+import ButtonProps from './Button.types'
 
 export default function IconButton({
   onClick,

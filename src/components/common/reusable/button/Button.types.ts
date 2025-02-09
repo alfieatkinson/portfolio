@@ -1,4 +1,4 @@
-import ComponentProps from '@/types/components/ComponentProps'
+import ComponentProps from '@/types/component'
 
 export default interface ButtonProps extends ComponentProps {
   onClick?: () => void
