@@ -1,9 +1,8 @@
 import React from 'react'
 import { lazy, Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-
-const Navbar = lazy(() => import('@/components/layout/Navbar'))
-const Footer = lazy(() => import('@/components/layout/Footer'))
+import { Helmet } from 'react-helmet'
+import Preloader from '@/components/common/Preloader'
+import Hero from '@/components/sections/Hero'
 
 export default function HomePage(): React.JSX.Element {
   return (
@@ -15,9 +14,8 @@ export default function HomePage(): React.JSX.Element {
           content='Alfie Atkinson is a UK-based software engineer specialising in full-stack web development with React, Django, and Node.js.'
         />
       </Helmet>
-      <Suspense fallback={null}>
-        <Navbar />
-        <Footer />
+      <Suspense fallback={<Preloader />}>
+        <Hero />
       </Suspense>
     </>
   )
