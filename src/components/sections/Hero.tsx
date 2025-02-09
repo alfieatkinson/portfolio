@@ -1,9 +1,11 @@
-import React from "react"
-import { lazy } from "react"
-import clsx from "clsx"
-import useFadeInMounted from "@/hooks/useFadeInMounted"
+import React from 'react'
+import { lazy } from 'react'
+import clsx from 'clsx'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
 
-const Section = lazy(() => import("@/components/layout/Section"))
+const Section = lazy(() => import('@/components/layout/Section'))
+const HighlightText = lazy(() => import('@/components/common/HighlightText'))
+const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'))
 
 export default function Hero(): React.JSX.Element {
   const { animationClass } = useFadeInMounted()
@@ -14,7 +16,7 @@ export default function Hero(): React.JSX.Element {
     >
       <div className='flex h-3/4 flex-col justify-center space-y-4 sm:space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
-          Hey👋, I'm Louis Gustavo
+          Hey👋, I'm Alfie Atkinson
         </h2>
         <h1
           className={clsx(
@@ -23,8 +25,8 @@ export default function Hero(): React.JSX.Element {
             'break-words font-extrabold tracking-tight'
           )}
         >
-          I specialize in both building <b>web interfaces</b> and{' '}
-          <b>backend systems</b>.
+          I specialise in both building <HighlightText>web interfaces</HighlightText> and{' '}
+          <HighlightText>backend systems</HighlightText>.
         </h1>
         <p
           className={clsx(
@@ -34,7 +36,7 @@ export default function Hero(): React.JSX.Element {
             'pb-0'
           )}
         >
-          Software Engineer
+          <SkillsTypewriter />
         </p>
       </div>
     </Section>
