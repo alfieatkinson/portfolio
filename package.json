@@ -24,6 +24,7 @@
     "remixicon-react": "^1.0.0",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0",
     "url": "^0.11.4",
     "zustand": "^4.5.6"
   },
