@@ -2,7 +2,11 @@ import React from 'react'
 import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet'
 import Preloader from '@/components/common/Preloader'
-import Hero from '@/components/sections/Hero'
+import PageWrapper from '@/components/layout/PageWrapper'
+
+const Navbar = lazy(() => import('@/components/layout/Navbar'))
+const Hero = lazy(() => import('@/components/sections/Hero'))
+const Footer = lazy(() => import('@/components/layout/Footer'))
 
 export default function HomePage(): React.JSX.Element {
   return (
@@ -15,7 +19,11 @@ export default function HomePage(): React.JSX.Element {
         />
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <Hero />
+        <PageWrapper>
+          <Navbar />
+          <Hero />
+          <Footer />
+        </PageWrapper>
       </Suspense>
     </>
   )
