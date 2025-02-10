@@ -4,8 +4,10 @@ import clsx from 'clsx'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const Section = lazy(() => import('@/components/layout/Section'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
 const HighlightText = lazy(() => import('@/components/common/HighlightText'))
 const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
 
 export default function Hero(): React.JSX.Element {
   const { animationClass } = useFadeInMounted()
@@ -16,7 +18,13 @@ export default function Hero(): React.JSX.Element {
     >
       <div className='flex h-3/4 flex-col justify-center space-y-4 sm:space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
-          Hey👋, I'm Alfie Atkinson
+          Hey👋, I'm{' '}
+          <SlidingInUnderline
+            type='secondary'
+            height='lg'
+          >
+            Alfie Atkinson
+          </SlidingInUnderline>
         </h2>
         <h1
           className={clsx(
@@ -38,6 +46,7 @@ export default function Hero(): React.JSX.Element {
         >
           <SkillsTypewriter />
         </p>
+        <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>
     </Section>
   )

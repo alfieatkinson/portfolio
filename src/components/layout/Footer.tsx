@@ -5,6 +5,7 @@ const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/Pr
 const NavLinks = lazy(() => import('@/components/common/NavLinks'))
 const Title = lazy(() => import('@/components/common/Title'))
 const ArrowUpSLineIcon = lazy(() => import('remixicon-react/ArrowUpSLineIcon'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
 
 export default function Footer(): React.JSX.Element {
   const scrollToTop = (): void => {
@@ -27,6 +28,7 @@ export default function Footer(): React.JSX.Element {
         <p className='pb-3 font-light sm:pb-0'>&copy; 2025 developed by Alfie Atkinson</p>
         <div className='flex flex-col flex-wrap items-start gap-3 sm:flex-row sm:items-center sm:gap-0 sm:space-x-6'>
           <NavLinks />
+          <SocialMediaLinks />
         </div>
       </div>
     </footer>
