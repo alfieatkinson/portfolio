@@ -9,7 +9,7 @@ export default function HighlightText({ children }: ComponentProps): React.JSX.E
 
   useEffect((): (() => void) => {
     const interval = setInterval((): void => {
-      setDegree((degree + 15) % 360)
+      setDegree((degree + 10) % 360)
       if (ref.current) {
         ref.current.style.backgroundImage = `linear-gradient(${degree}deg, var(--tw-gradient-stops))`
       }
@@ -21,8 +21,8 @@ export default function HighlightText({ children }: ComponentProps): React.JSX.E
     <span
       ref={ref}
       className={clsx(
-        'from-fuchsia-700 to-indigo-700 bg-clip-text',
-        'dark:from-fuchsia-400 dark:to-blue-400',
+        'from-fuchsia-700 to-purple-700 bg-clip-text',
+        'dark:from-fuchsia-400 dark:to-purple-400',
         'text-transparent transition'
       )}
     >
