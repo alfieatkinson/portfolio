@@ -26,7 +26,7 @@ export default function HighlightText({ children }: ComponentProps): React.JSX.E
         'text-transparent transition'
       )}
     >
-      {children}
+      <strong>{children}</strong>
     </span>
   )
 }
