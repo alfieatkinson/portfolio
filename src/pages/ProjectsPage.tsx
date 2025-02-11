@@ -5,24 +5,26 @@ import Preloader from '@/components/common/Preloader'
 
 const PageWrapper = lazy(() => import('@/components/layout/PageWrapper'))
 const Navbar = lazy(() => import('@/components/layout/Navbar'))
+const Projects = lazy(() => import('@/components/sections/Projects'))
 const Footer = lazy(() => import('@/components/layout/Footer'))
 
-export default function ProjectsPage(): React.JSX.Element {
+export default function AboutPage(): React.JSX.Element {
   return (
-      <>
-        <Helmet>
-          <title>Projects | Alfie Atkinson</title>
-          <meta
-            name='description'
-            content='Alfie Atkinson is a UK-based software engineer specialising in full-stack web development with React, Django, and Node.js.'
-          />
-        </Helmet>
-        <Suspense fallback={<Preloader />}>
-          <PageWrapper>
-            <Navbar />
-            <Footer />
-          </PageWrapper>
-        </Suspense>
-      </>
-    )
+    <>
+      <Helmet>
+        <title>Projects | Louis Gustavo</title>
+        <meta
+          name="description"
+          content="Explore Louis Gustavo's software projects featuring Spring Boot, Vue.js, React, Laravel, and more!"
+        />
+      </Helmet>
+      <Suspense fallback={<Preloader />}>
+        <PageWrapper>
+          <Navbar />
+          <Projects />
+          <Footer />
+        </PageWrapper>
+      </Suspense>
+    </>
+  )
 }

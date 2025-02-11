@@ -6,6 +6,7 @@ import PageWrapper from '@/components/layout/PageWrapper'
 
 const Navbar = lazy(() => import('@/components/layout/Navbar'))
 const Hero = lazy(() => import('@/components/sections/Hero'))
+const FeaturedProjects = lazy(() => import('@/components/sections/FeaturedProjects'))
 const Footer = lazy(() => import('@/components/layout/Footer'))
 
 export default function HomePage(): React.JSX.Element {
@@ -22,6 +23,7 @@ export default function HomePage(): React.JSX.Element {
         <PageWrapper>
           <Navbar />
           <Hero />
+          <FeaturedProjects />
           <Footer />
         </PageWrapper>
       </Suspense>
