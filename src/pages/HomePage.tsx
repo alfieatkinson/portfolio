@@ -23,6 +23,7 @@ export default function HomePage(): React.JSX.Element {
         <PageWrapper>
           <Navbar />
           <Hero />
+          <br />
           <FeaturedProjects />
           <Footer />
         </PageWrapper>

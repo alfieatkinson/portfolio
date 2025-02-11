@@ -8,9 +8,12 @@ const SlidingInUnderline = lazy(() => import('@/components/common/reusable/Slidi
 const HighlightText = lazy(() => import('@/components/common/HighlightText'))
 const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'))
 const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))
+const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon'))
 
 export default function Hero(): React.JSX.Element {
   const { animationClass } = useFadeInMounted()
+  const scrollToProjects = (): void => window.location.assign('#projects')
   
   return (
     <Section
@@ -18,7 +21,7 @@ export default function Hero(): React.JSX.Element {
     >
       <div className='flex h-3/4 flex-col justify-center space-y-4 sm:space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
-          Hey👋, I'm{' '}
+          Hello, I am{' '}
           <SlidingInUnderline
             type='secondary'
             height='lg'
@@ -49,6 +52,14 @@ export default function Hero(): React.JSX.Element {
         </p>
         <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>
+      
+      <PrimaryButton
+        className='mx-auto animate-bounce'
+        icon={<ArrowDownSLineIcon />}
+        onClick={scrollToProjects}
+      >
+        Featured projects
+      </PrimaryButton>
     </Section>
   )
 }
