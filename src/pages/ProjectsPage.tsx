@@ -12,10 +12,10 @@ export default function AboutPage(): React.JSX.Element {
   return (
     <>
       <Helmet>
-        <title>Projects | Louis Gustavo</title>
+        <title>Projects | Alfie Atkinson</title>
         <meta
           name="description"
-          content="Explore Louis Gustavo's software projects featuring Spring Boot, Vue.js, React, Laravel, and more!"
+          content="Explore Alfie Atkinson's latest projects, including machine learning, web development, and more."
         />
       </Helmet>
       <Suspense fallback={<Preloader />}>
