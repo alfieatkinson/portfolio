@@ -20,7 +20,7 @@ export default function About({ children }: ComponentProps): React.JSX.Element {
     <div className={clsx(animationClass)}>
       <Section
         className='[&>*]:animate-fade-in md:px-0 [&_p]:text-muted-dark [&_p]:dark:text-muted'
-        maxWidthClass='md:max-w-screen-sm'
+        maxWidthClass='md:max-w-screen-md'
       >
         <ReactMarkdown
           components={{
