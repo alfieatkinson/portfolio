@@ -10,14 +10,5 @@ export default defineConfig({
       '@': path.resolve(path.dirname(new URL(import.meta.url).pathname), './src')
     }
   },
-  server: {
-    proxy: {
-      '/blog/rss': {
-        target: 'https://medium.com/@leejhlouis/feed',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/blog\/rss/, '')
-      }
-    }
-  },
   assetsInclude: ['**/*.md']
 })

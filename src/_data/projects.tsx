@@ -1,7 +1,6 @@
 import { lazy } from 'react'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon'
-import constants from '@/constants'
 import ProjectProps from '@/types/components/ProjectProps'
 import LinkProps from '@/types/LinkProps'
 import getGitHubUrl from '@/utils/getGitHubUrl'
