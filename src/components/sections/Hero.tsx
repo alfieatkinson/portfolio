@@ -5,7 +5,7 @@ import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const Section = lazy(() => import('@/components/layout/Section'))
 const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
-const HighlightText = lazy(() => import('@/components/common/HighlightText'))
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'))
 const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'))
 const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))

@@ -8,7 +8,7 @@ const Heading1 = lazy(() => import('@/components/common/reusable/headings/Headin
 const Heading2 = lazy(() => import('@/components/common/reusable/headings/Heading2'))
 const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'))
 const Badge = lazy(() => import('@/components/common/reusable/Badge'))
-const HighlightText = lazy(() => import('@/components/common/HighlightText'))
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'))
 const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
 const Section = lazy(() => import('@/components/layout/Section'))
 const ReactMarkdown = lazy(() => import('react-markdown'))
