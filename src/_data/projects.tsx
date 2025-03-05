@@ -1,27 +1,27 @@
-import { lazy } from 'react'
-import GithubFillIcon from 'remixicon-react/GithubFillIcon'
-import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon'
-import ProjectProps from '@/types/components/ProjectProps'
-import LinkProps from '@/types/LinkProps'
-import getGitHubUrl from '@/utils/getGitHubUrl'
+import { lazy } from 'react';
+import GithubFillIcon from 'remixicon-react/GithubFillIcon';
+import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon';
+import ProjectProps from '@/types/components/ProjectProps';
+import LinkProps from '@/types/LinkProps';
+import getGitHubUrl from '@/utils/getGitHubUrl';
 
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'));
 
 const github: LinkProps = {
   label: 'Source Code',
   icon: <GithubFillIcon size={22} />,
-}
+};
 
 const live: LinkProps = {
   label: 'Live Demo',
   icon: <ExternalLinkFillIcon size={22} />,
-}
+};
 
 const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
-  const links: LinkProps[] = [{ ...github, url: getGitHubUrl(githubRepo) }]
-  if (url) links.push({ ...live, url })
-  return links
-}
+  const links: LinkProps[] = [{ ...github, url: getGitHubUrl(githubRepo) }];
+  if (url) links.push({ ...live, url });
+  return links;
+};
 
 const filters: string[] = [
   'HTML/CSS',
@@ -44,8 +44,8 @@ const filters: string[] = [
   'NumPy',
   'Pandas',
   'Heroku',
-  'Vercel'
-]
+  'Vercel',
+];
 
 const projects: ProjectProps[] = [
   {
@@ -57,18 +57,18 @@ const projects: ProjectProps[] = [
     techStacks: ['TypeScript', 'React', 'Next.js', 'TailwindCSS', 'Django', 'PostgreSQL'],
     otherTechStacks: ['Python', 'JavaScript', 'Git', 'CI/CD', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
-    links: getLinks('Open-License-Media-Web-App')
+    links: getLinks('Open-License-Media-Web-App'),
   },
   {
     slug: 'portfolio-website',
     featured: true,
     title: 'Portfolio Website',
-    description: 
+    description:
       'My personal portfolio website built with TypeScript, React, and TailwindCSS, deployed on Vercel.',
     techStacks: ['TypeScript', 'React', 'TailwindCSS', 'Vercel'],
     otherTechStacks: ['Git', 'HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: getLinks('Portfolio-Website', 'https://alfieatkinson.dev')
+    links: getLinks('Portfolio-Website', 'https://alfieatkinson.dev'),
   },
   {
     slug: 'library-management-system',
@@ -79,7 +79,7 @@ const projects: ProjectProps[] = [
     techStacks: ['C++'],
     otherTechStacks: ['Git', 'CI/CD'],
     category: 'Systems programming',
-    links: getLinks('Library-Management-System')
+    links: getLinks('Library-Management-System'),
   },
   {
     slug: 'sentiment-analysis-tool',
@@ -89,13 +89,14 @@ const projects: ProjectProps[] = [
       <span>
         A deep-learning sentiment analysis tool using{' '}
         <InlineLink href='https://huggingface.co/docs/transformers/model_doc/bert'>BERT</InlineLink>
-        to analyse social media data in real-time. Integrated Reddit API for fetching and processing user queries.
+        to analyse social media data in real-time. Integrated Reddit API for fetching and processing
+        user queries.
       </span>
     ),
     techStacks: ['Python', 'TensorFlow', 'PyQt', 'Pandas', 'NumPy'],
     otherTechStacks: ['Git'],
     category: 'Machine learning',
-    links: getLinks('sentiment-analysis-tool')
+    links: getLinks('sentiment-analysis-tool'),
   },
   {
     slug: 'lambda-calculus-interpreter',
@@ -106,7 +107,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Python'],
     otherTechStacks: ['Git', 'Functional Programming'],
     category: 'Computational theory',
-    links: getLinks('lambda-calculus-interpreter')
+    links: getLinks('lambda-calculus-interpreter'),
   },
   {
     slug: 'sudoku-solver',
@@ -117,8 +118,8 @@ const projects: ProjectProps[] = [
     techStacks: ['Python', 'Z3 Theorem Prover'],
     otherTechStacks: ['Git', 'Constraint Satisfaction'],
     category: 'Algorithms',
-    links: getLinks('sudoku-solver')
-  }
-]
+    links: getLinks('sudoku-solver'),
+  },
+];
 
-export { filters, projects }
+export { filters, projects };

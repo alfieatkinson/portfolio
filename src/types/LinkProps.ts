@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default interface LinkProps {
-  label: string
-  icon: React.JSX.Element
-  url?: string
+  label: string;
+  icon: React.JSX.Element;
+  url?: string;
 }

@@ -1,13 +1,13 @@
-import React from 'react'
-import { lazy, Suspense } from 'react'
-import { Helmet } from 'react-helmet'
-import Preloader from '@/components/common/Preloader'
-import PageWrapper from '@/components/layout/PageWrapper'
+import React from 'react';
+import { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
+import Preloader from '@/components/common/Preloader';
+import PageWrapper from '@/components/layout/PageWrapper';
 
-const Navbar = lazy(() => import('@/components/layout/Navbar'))
-const Hero = lazy(() => import('@/components/sections/Hero'))
-const FeaturedProjects = lazy(() => import('@/components/sections/FeaturedProjects'))
-const Footer = lazy(() => import('@/components/layout/Footer'))
+const Navbar = lazy(() => import('@/components/layout/Navbar'));
+const Hero = lazy(() => import('@/components/sections/Hero'));
+const FeaturedProjects = lazy(() => import('@/components/sections/FeaturedProjects'));
+const Footer = lazy(() => import('@/components/layout/Footer'));
 
 export default function HomePage(): React.JSX.Element {
   return (
@@ -29,5 +29,5 @@ export default function HomePage(): React.JSX.Element {
         </PageWrapper>
       </Suspense>
     </>
-  )
+  );
 }

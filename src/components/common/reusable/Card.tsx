@@ -1,6 +1,6 @@
-import React from 'react'
-import clsx from 'clsx'
-import ComponentProps from '@/types/components/ComponentProps'
+import React from 'react';
+import clsx from 'clsx';
+import ComponentProps from '@/types/components/ComponentProps';
 
 export default function Card({ className, children }: ComponentProps): React.JSX.Element {
   return (
@@ -14,10 +14,10 @@ export default function Card({ className, children }: ComponentProps): React.JSX
         'hover:bg-slate-100/30 dark:hover:bg-slate-600/30',
         'cursor-pointer',
         'p-4 sm:p-6',
-        className
+        className,
       )}
     >
       {children}
     </div>
-  )
+  );
 }

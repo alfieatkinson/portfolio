@@ -1,9 +1,9 @@
-import React from 'react'
-import { lazy } from 'react'
-import clsx from 'clsx'
-import InlineLinkProps from '@/types/components/InlineLinkProps'
+import React from 'react';
+import { lazy } from 'react';
+import clsx from 'clsx';
+import InlineLinkProps from '@/types/components/InlineLinkProps';
 
-const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'));
 
 export default function InlineLink({ href, children }: InlineLinkProps): React.JSX.Element {
   return (
@@ -15,10 +15,10 @@ export default function InlineLink({ href, children }: InlineLinkProps): React.J
         'cursor-pointer',
         'font-semibold duration-300',
         'text-primary-dark hover:text-primary-lighter-dark',
-        'dark:text-primary-light dark:hover:text-primary-lighter'
+        'dark:text-primary-light dark:hover:text-primary-lighter',
       )}
     >
       <SlidingInUnderline>{children}</SlidingInUnderline>
     </a>
-  )
+  );
 }

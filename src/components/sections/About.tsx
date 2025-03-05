@@ -1,20 +1,20 @@
-import React from 'react'
-import { lazy } from 'react'
-import clsx from 'clsx'
-import useFadeInMounted from '@/hooks/useFadeInMounted'
-import ComponentProps from '@/types/components/ComponentProps'
+import React from 'react';
+import { lazy } from 'react';
+import clsx from 'clsx';
+import useFadeInMounted from '@/hooks/useFadeInMounted';
+import ComponentProps from '@/types/components/ComponentProps';
 
-const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'))
-const Heading2 = lazy(() => import('@/components/common/reusable/headings/Heading2'))
-const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'))
-const Badge = lazy(() => import('@/components/common/reusable/Badge'))
-const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'))
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
-const Section = lazy(() => import('@/components/layout/Section'))
-const ReactMarkdown = lazy(() => import('react-markdown'))
+const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'));
+const Heading2 = lazy(() => import('@/components/common/reusable/headings/Heading2'));
+const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'));
+const Badge = lazy(() => import('@/components/common/reusable/Badge'));
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'));
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'));
+const Section = lazy(() => import('@/components/layout/Section'));
+const ReactMarkdown = lazy(() => import('react-markdown'));
 
 export default function About({ children }: ComponentProps): React.JSX.Element {
-  const { animationClass } = useFadeInMounted()
+  const { animationClass } = useFadeInMounted();
 
   return (
     <div className={clsx(animationClass)}>
@@ -36,12 +36,12 @@ export default function About({ children }: ComponentProps): React.JSX.Element {
               <li>
                 <Badge>{children}</Badge>
               </li>
-            )
+            ),
           }}
         >
           {(localStorage.about as string) ?? children}
         </ReactMarkdown>
       </Section>
     </div>
-  )
+  );
 }

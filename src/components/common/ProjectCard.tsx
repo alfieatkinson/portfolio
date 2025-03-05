@@ -1,18 +1,18 @@
-import React from 'react'
-import { lazy } from 'react'
-import clsx from 'clsx'
-import ProjectProps from '@/types/components/ProjectProps'
-import LinkProps from '@/types/LinkProps'
+import React from 'react';
+import { lazy } from 'react';
+import clsx from 'clsx';
+import ProjectProps from '@/types/components/ProjectProps';
+import LinkProps from '@/types/LinkProps';
 
-const Badge = lazy(() => import('@/components/common/reusable/Badge'))
-const Card = lazy(() => import('@/components/common/reusable/Card'))
-const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'))
+const Badge = lazy(() => import('@/components/common/reusable/Badge'));
+const Card = lazy(() => import('@/components/common/reusable/Card'));
+const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'));
 
 export default function ProjectCard({
   title,
   description,
   techStacks,
-  links
+  links,
 }: ProjectProps): React.JSX.Element {
   const techStacksEntry = techStacks.map(
     (techStack: string, index: number): React.JSX.Element => (
@@ -20,31 +20,23 @@ export default function ProjectCard({
         key={index}
         className={clsx(
           'mr-2 last-of-type:mr-0',
-          'text-base font-medium text-primary-dark dark:text-primary-light'
+          'text-base font-medium text-primary-dark dark:text-primary-light',
         )}
       >
         {techStack}
       </Badge>
-    )
-  )
+    ),
+  );
 
   const linksEntry = links.map(
     (link: LinkProps, index: number): React.JSX.Element => (
-      <li
-        key={index}
-        className='z-10'
-      >
-        <a
-          href={link.url}
-          target='_blank'
-          rel='noreferrer'
-          aria-label={link.label}
-        >
+      <li key={index} className='z-10'>
+        <a href={link.url} target='_blank' rel='noreferrer' aria-label={link.label}>
           {link.icon}
         </a>
       </li>
-    )
-  )
+    ),
+  );
 
   return (
     <Card className='flex flex-col justify-between'>
@@ -57,7 +49,7 @@ export default function ProjectCard({
             }
             className={clsx(
               'no-default z-0',
-              'group-hover:text-primary-dark group-hover:dark:text-primary-light'
+              'group-hover:text-primary-dark group-hover:dark:text-primary-light',
             )}
             target='_blank'
             rel='noreferrer'
@@ -72,5 +64,5 @@ export default function ProjectCard({
         <ul className='flex space-x-3'>{linksEntry}</ul>
       </footer>
     </Card>
-  )
+  );
 }

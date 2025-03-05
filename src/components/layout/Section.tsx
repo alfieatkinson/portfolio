@@ -1,12 +1,12 @@
-import React from 'react'
-import clsx from 'clsx'
-import { SectionProps } from '@/types/components/SectionProps'
+import React from 'react';
+import clsx from 'clsx';
+import { SectionProps } from '@/types/components/SectionProps';
 
 export default function Section({
   id,
   className,
   maxWidthClass,
-  children
+  children,
 }: SectionProps): React.JSX.Element {
   return (
     <section
@@ -15,12 +15,12 @@ export default function Section({
         className,
         maxWidthClass,
         {
-          'xl:max-w-screen-xl': !maxWidthClass
+          'xl:max-w-screen-xl': !maxWidthClass,
         },
-        'container py-6 sm:py-12'
+        'container py-6 sm:py-12',
       )}
     >
       {children}
     </section>
-  )
+  );
 }

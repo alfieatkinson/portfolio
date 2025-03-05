@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default interface SocialProps {
-  name: string
-  url: string
-  icon: React.JSX.Element
+  name: string;
+  url: string;
+  icon: React.JSX.Element;
 }

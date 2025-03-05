@@ -1,3 +1,3 @@
 export default interface SizeProps {
-  size?: string | 'sm'
+  size?: string | 'sm';
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import Typewriter from 'typewriter-effect'
+import React from 'react';
+import Typewriter from 'typewriter-effect';
 
 export default function SkillsTypewriter(): React.JSX.Element {
   return (
@@ -16,5 +16,5 @@ export default function SkillsTypewriter(): React.JSX.Element {
         deleteSpeed: 50,
       }}
     />
-  )
+  );
 }

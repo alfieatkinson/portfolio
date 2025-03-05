@@ -3,4 +3,4 @@ declare module '*.md' {
   export default value
 }
 
-declare module 'path';
+declare module 'path'

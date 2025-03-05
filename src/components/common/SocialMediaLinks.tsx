@@ -1,24 +1,19 @@
-import React from 'react'
-import clsx from 'clsx'
-import socialList from '@/_data/social.tsx'
-import ComponentProps from '@/types/components/ComponentProps'
-import SocialProps from '@/types/SocialProps'
+import React from 'react';
+import clsx from 'clsx';
+import socialList from '@/_data/social.tsx';
+import ComponentProps from '@/types/components/ComponentProps';
+import SocialProps from '@/types/SocialProps';
 
 export default function SocialMediaLinks({ className }: ComponentProps): React.JSX.Element {
   const social = socialList.map(
     (item: SocialProps, index: number): React.JSX.Element => (
       <li key={index}>
-        <a
-          href={item.url}
-          target='_blank'
-          rel='noreferrer'
-          aria-label={item.name}
-        >
+        <a href={item.url} target='_blank' rel='noreferrer' aria-label={item.name}>
           {item.icon}
         </a>
       </li>
-    )
-  )
+    ),
+  );
 
   return (
     // prettier-ignore
@@ -30,5 +25,5 @@ export default function SocialMediaLinks({ className }: ComponentProps): React.J
     >
       {social}
     </ul>
-  )
+  );
 }

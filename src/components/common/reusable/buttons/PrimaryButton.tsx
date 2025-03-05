@@ -1,9 +1,9 @@
-import React from 'react'
-import { lazy } from 'react'
-import clsx from 'clsx'
-import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps'
+import React from 'react';
+import { lazy } from 'react';
+import clsx from 'clsx';
+import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps';
 
-const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'));
 
 export default function PrimaryButton({
   className,
@@ -11,7 +11,7 @@ export default function PrimaryButton({
   icon,
   children,
   inverted,
-  active
+  active,
 }: PrimaryButtonProps): React.JSX.Element {
   return (
     <button
@@ -20,14 +20,14 @@ export default function PrimaryButton({
         'group/underline flex w-fit items-center transition duration-300 ease-in-out',
         {
           'font-extrabold text-primary-dark dark:text-white': active,
-          'font-semibold': !active
+          'font-semibold': !active,
         },
         {
           'rounded-xl px-3 py-1': inverted,
           'text-primary-dark dark:text-primary-light': inverted,
           'hover:bg-primary-dark/5 dark:hover:bg-primary-light/5': inverted && !active,
-          'hover:text-primary-dark dark:hover:text-primary-light': !inverted && !active
-        }
+          'hover:text-primary-dark dark:hover:text-primary-light': !inverted && !active,
+        },
       )}
       onClick={onClick}
     >
@@ -35,5 +35,5 @@ export default function PrimaryButton({
       {!active && <SlidingInUnderline type='secondary'>{children}</SlidingInUnderline>}
       {active && children}
     </button>
-  )
+  );
 }

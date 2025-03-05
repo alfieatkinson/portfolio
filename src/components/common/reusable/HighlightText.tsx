@@ -1,21 +1,21 @@
-import React from "react"
-import { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
-import ComponentProps from '@/types/components/ComponentProps'
+import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import clsx from 'clsx';
+import ComponentProps from '@/types/components/ComponentProps';
 
 export default function HighlightText({ children }: ComponentProps): React.JSX.Element {
-  const ref = useRef<HTMLLinkElement>(null)
-  const [degree, setDegree] = useState<number>(0)
+  const ref = useRef<HTMLLinkElement>(null);
+  const [degree, setDegree] = useState<number>(0);
 
   useEffect((): (() => void) => {
     const interval = setInterval((): void => {
-      setDegree((degree + 10) % 360)
+      setDegree((degree + 10) % 360);
       if (ref.current) {
-        ref.current.style.backgroundImage = `linear-gradient(${degree}deg, var(--tw-gradient-stops))`
+        ref.current.style.backgroundImage = `linear-gradient(${degree}deg, var(--tw-gradient-stops))`;
       }
-    }, 75)
-    return (): void => clearInterval(interval)
-  })
+    }, 75);
+    return (): void => clearInterval(interval);
+  });
 
   return (
     <span
@@ -23,10 +23,10 @@ export default function HighlightText({ children }: ComponentProps): React.JSX.E
       className={clsx(
         'from-fuchsia-700 to-purple-700 bg-clip-text',
         'dark:from-fuchsia-400 dark:to-purple-400',
-        'text-transparent transition'
+        'text-transparent transition',
       )}
     >
       <strong>{children}</strong>
     </span>
-  )
+  );
 }
