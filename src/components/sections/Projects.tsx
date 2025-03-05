@@ -1,53 +1,53 @@
-import React from 'react';
-import { lazy, useEffect, useState } from 'react';
-import clsx from 'clsx';
-import { filters, projects } from '@/_data/projects';
-import useFadeInMounted from '@/hooks/useFadeInMounted';
-import ProjectProps from '@/types/components/ProjectProps';
+import React from 'react'
+import { lazy, useEffect, useState } from 'react'
+import clsx from 'clsx'
+import { filters, projects } from '@/_data/projects'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
+import ProjectProps from '@/types/components/ProjectProps'
 
-const Badge = lazy(() => import('@/components/common/reusable/Badge'));
-const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'));
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'));
-const ProjectCard = lazy(() => import('@/components/common/ProjectCard'));
-const Section = lazy(() => import('@/components/layout/Section'));
+const Badge = lazy(() => import('@/components/common/reusable/Badge'))
+const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard'))
+const Section = lazy(() => import('@/components/layout/Section'))
 
 export default function Projects(): React.JSX.Element {
-  const { animationClass } = useFadeInMounted();
+  const { animationClass } = useFadeInMounted()
 
-  const [filteredProjects, setFilteredProjects] = useState<Array<ProjectProps>>([...projects]);
-  const [selectedFilters, setSelectedFilters] = useState<Array<string>>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Array<ProjectProps>>([...projects])
+  const [selectedFilters, setSelectedFilters] = useState<Array<string>>([])
 
   const filterProjects = (newValue: string): void => {
     if (selectedFilters.includes(newValue)) {
-      setSelectedFilters(selectedFilters.filter((value) => value !== newValue));
-      return;
+      setSelectedFilters(selectedFilters.filter((value) => value !== newValue))
+      return
     }
-    setSelectedFilters([...selectedFilters, newValue]);
-  };
+    setSelectedFilters([...selectedFilters, newValue])
+  }
   const removeselectedFilters = (): void => {
-    setSelectedFilters([]);
-  };
+    setSelectedFilters([])
+  }
 
   useEffect((): void => {
-    let filtered: ProjectProps[] = [...projects];
+    let filtered: ProjectProps[] = [...projects]
 
     if (selectedFilters.length) {
       filtered = projects.filter((project: ProjectProps) => {
-        let allTechStacks: string[] = [...project.techStacks];
+        let allTechStacks: string[] = [...project.techStacks]
         if (project.otherTechStacks) {
-          allTechStacks = [...allTechStacks, ...project.otherTechStacks];
+          allTechStacks = [...allTechStacks, ...project.otherTechStacks]
         }
-        console.log(allTechStacks);
-        return selectedFilters.every((filter: string) => allTechStacks.includes(filter));
-      });
+        console.log(allTechStacks)
+        return selectedFilters.every((filter: string) => allTechStacks.includes(filter))
+      })
     }
 
-    setFilteredProjects(filtered);
-  }, [selectedFilters]);
+    setFilteredProjects(filtered)
+  }, [selectedFilters])
 
   const projectsEntry: React.JSX.Element[] = filteredProjects.map((project) => (
     <ProjectCard {...project} key={project.id} />
-  ));
+  ))
 
   const filterEntry: React.JSX.Element[] = filters.map((filter) => (
     <Badge
@@ -58,7 +58,7 @@ export default function Projects(): React.JSX.Element {
     >
       {filter}
     </Badge>
-  ));
+  ))
 
   return (
     <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}>
@@ -96,5 +96,5 @@ export default function Projects(): React.JSX.Element {
         </div>
       )}
     </Section>
-  );
+  )
 }

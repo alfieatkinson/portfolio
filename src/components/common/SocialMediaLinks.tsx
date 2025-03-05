@@ -1,8 +1,8 @@
-import React from 'react';
-import clsx from 'clsx';
-import socialList from '@/_data/social.tsx';
-import ComponentProps from '@/types/components/ComponentProps';
-import SocialProps from '@/types/SocialProps';
+import React from 'react'
+import clsx from 'clsx'
+import socialList from '@/_data/social.tsx'
+import ComponentProps from '@/types/components/ComponentProps'
+import SocialProps from '@/types/SocialProps'
 
 export default function SocialMediaLinks({ className }: ComponentProps): React.JSX.Element {
   const social = socialList.map(
@@ -13,7 +13,7 @@ export default function SocialMediaLinks({ className }: ComponentProps): React.J
         </a>
       </li>
     ),
-  );
+  )
 
   return (
     // prettier-ignore
@@ -25,5 +25,5 @@ export default function SocialMediaLinks({ className }: ComponentProps): React.J
     >
       {social}
     </ul>
-  );
+  )
 }

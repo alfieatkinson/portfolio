@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import ComponentProps from '@/types/components/ComponentProps';
+import React from 'react'
+import clsx from 'clsx'
+import ComponentProps from '@/types/components/ComponentProps'
 
 export default function Card({ className, children }: ComponentProps): React.JSX.Element {
   return (
@@ -19,5 +19,5 @@ export default function Card({ className, children }: ComponentProps): React.JSX
     >
       {children}
     </div>
-  );
+  )
 }

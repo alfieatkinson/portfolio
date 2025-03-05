@@ -1,8 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import clsx from 'clsx';
-import navItems from '@/_data/navItems.ts';
-import NavItemsProps from '@/types/NavItemsProps';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import clsx from 'clsx'
+import navItems from '@/_data/navItems.ts'
+import NavItemsProps from '@/types/NavItemsProps'
 
 export default function Dropdown(): React.JSX.Element {
   const links = navItems.map(
@@ -28,7 +28,7 @@ export default function Dropdown(): React.JSX.Element {
         </li>
       </NavLink>
     ),
-  );
+  )
 
   return (
     <ul
@@ -41,5 +41,5 @@ export default function Dropdown(): React.JSX.Element {
     >
       {links}
     </ul>
-  );
+  )
 }

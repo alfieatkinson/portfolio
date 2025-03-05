@@ -1,27 +1,27 @@
-import { lazy } from 'react';
-import GithubFillIcon from 'remixicon-react/GithubFillIcon';
-import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon';
-import ProjectProps from '@/types/components/ProjectProps';
-import LinkProps from '@/types/LinkProps';
-import getGitHubUrl from '@/utils/getGitHubUrl';
+import { lazy } from 'react'
+import GithubFillIcon from 'remixicon-react/GithubFillIcon'
+import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon'
+import ProjectProps from '@/types/components/ProjectProps'
+import LinkProps from '@/types/LinkProps'
+import getGitHubUrl from '@/utils/getGitHubUrl'
 
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'));
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
 
 const github: LinkProps = {
   label: 'Source Code',
   icon: <GithubFillIcon size={22} />,
-};
+}
 
 const live: LinkProps = {
   label: 'Live Demo',
   icon: <ExternalLinkFillIcon size={22} />,
-};
+}
 
 const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
-  const links: LinkProps[] = [{ ...github, url: getGitHubUrl(githubRepo) }];
-  if (url) links.push({ ...live, url });
-  return links;
-};
+  const links: LinkProps[] = [{ ...github, url: getGitHubUrl(githubRepo) }]
+  if (url) links.push({ ...live, url })
+  return links
+}
 
 const filters: string[] = [
   'HTML/CSS',
@@ -45,7 +45,7 @@ const filters: string[] = [
   'Pandas',
   'Heroku',
   'Vercel',
-];
+]
 
 const projects: ProjectProps[] = [
   {
@@ -120,6 +120,6 @@ const projects: ProjectProps[] = [
     category: 'Algorithms',
     links: getLinks('sudoku-solver'),
   },
-];
+]
 
-export { filters, projects };
+export { filters, projects }

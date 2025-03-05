@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import BadgeProps from '@/types/components/BadgeProps';
+import React from 'react'
+import clsx from 'clsx'
+import BadgeProps from '@/types/components/BadgeProps'
 
 export default function Badge({
   className,

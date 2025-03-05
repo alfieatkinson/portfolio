@@ -1,4 +1,4 @@
-import NavItemsProps from '@/types/NavItemsProps';
+import NavItemsProps from '@/types/NavItemsProps'
 
 const navItems: NavItemsProps[] = [
   {
@@ -17,6 +17,6 @@ const navItems: NavItemsProps[] = [
     name: 'Resume',
     href: '/resume',
   },
-];
+]
 
-export default navItems;
+export default navItems

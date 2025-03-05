@@ -1,15 +1,15 @@
-import React from 'react';
-import { lazy } from 'react';
-import clsx from 'clsx';
-import useFadeInMounted from '@/hooks/useFadeInMounted';
-import constants from '@/constants';
-import checkDarkTheme from '@/utils/checkDarkTheme';
+import React from 'react'
+import { lazy } from 'react'
+import clsx from 'clsx'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
+import constants from '@/constants'
+import checkDarkTheme from '@/utils/checkDarkTheme'
 
-const Section = lazy(() => import('@/components/layout/Section'));
-const GitHubCalendar = lazy(() => import('react-github-calendar'));
+const Section = lazy(() => import('@/components/layout/Section'))
+const GitHubCalendar = lazy(() => import('react-github-calendar'))
 
 export default function GitHub(): React.JSX.Element {
-  const { animationClass } = useFadeInMounted();
+  const { animationClass } = useFadeInMounted()
 
   return (
     <div className={clsx(animationClass)}>
@@ -23,5 +23,5 @@ export default function GitHub(): React.JSX.Element {
         />
       </Section>
     </div>
-  );
+  )
 }

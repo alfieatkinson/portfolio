@@ -1,25 +1,25 @@
-import React from 'react';
-import { lazy, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
-import { projects } from '@/_data/projects';
-import useIntersectionObserver from '@/hooks/useIntersectionObserver';
-import clsx from 'clsx';
+import React from 'react'
+import { lazy, useRef } from 'react'
+import { NavLink } from 'react-router-dom'
+import { projects } from '@/_data/projects'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+import clsx from 'clsx'
 
-const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon'));
-const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'));
-const Heading2 = lazy(() => import('@/components/common/reusable/headings/Heading2'));
-const ProjectCard = lazy(() => import('@/components/common/ProjectCard'));
-const Section = lazy(() => import('@/components/layout/Section'));
+const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))
+const Heading2 = lazy(() => import('@/components/common/reusable/headings/Heading2'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard'))
+const Section = lazy(() => import('@/components/layout/Section'))
 
 export default function Projects(): React.JSX.Element {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
   useIntersectionObserver(ref, (): void => {
-    ref.current?.classList.add('animate-start');
-  });
+    ref.current?.classList.add('animate-start')
+  })
 
   const projectsEntry: React.JSX.Element[] = projects
     .filter(({ featured }) => !!featured)
-    .map((project) => <ProjectCard {...project} key={project.id} />);
+    .map((project) => <ProjectCard {...project} key={project.id} />)
 
   return (
     <div ref={ref}>
@@ -45,5 +45,5 @@ export default function Projects(): React.JSX.Element {
         </div>
       </Section>
     </div>
-  );
+  )
 }

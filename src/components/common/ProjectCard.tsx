@@ -1,12 +1,12 @@
-import React from 'react';
-import { lazy } from 'react';
-import clsx from 'clsx';
-import ProjectProps from '@/types/components/ProjectProps';
-import LinkProps from '@/types/LinkProps';
+import React from 'react'
+import { lazy } from 'react'
+import clsx from 'clsx'
+import ProjectProps from '@/types/components/ProjectProps'
+import LinkProps from '@/types/LinkProps'
 
-const Badge = lazy(() => import('@/components/common/reusable/Badge'));
-const Card = lazy(() => import('@/components/common/reusable/Card'));
-const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'));
+const Badge = lazy(() => import('@/components/common/reusable/Badge'))
+const Card = lazy(() => import('@/components/common/reusable/Card'))
+const Heading3 = lazy(() => import('@/components/common/reusable/headings/Heading3'))
 
 export default function ProjectCard({
   title,
@@ -26,7 +26,7 @@ export default function ProjectCard({
         {techStack}
       </Badge>
     ),
-  );
+  )
 
   const linksEntry = links.map(
     (link: LinkProps, index: number): React.JSX.Element => (
@@ -36,7 +36,7 @@ export default function ProjectCard({
         </a>
       </li>
     ),
-  );
+  )
 
   return (
     <Card className='flex flex-col justify-between'>
@@ -64,5 +64,5 @@ export default function ProjectCard({
         <ul className='flex space-x-3'>{linksEntry}</ul>
       </footer>
     </Card>
-  );
+  )
 }

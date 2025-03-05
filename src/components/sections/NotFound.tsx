@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function NotFound(): React.JSX.Element {
   return (
@@ -11,5 +11,5 @@ export default function NotFound(): React.JSX.Element {
         </NavLink>
       </h2>
     </div>
-  );
+  )
 }

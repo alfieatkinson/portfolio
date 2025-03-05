@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import ButtonProps from '@/types/components/buttons/ButtonProps';
+import React from 'react'
+import clsx from 'clsx'
+import ButtonProps from '@/types/components/buttons/ButtonProps'
 
 export default function IconButton({
   onClick,
@@ -22,5 +22,5 @@ export default function IconButton({
       <p className='sr-only'>{screenReaderText}</p>
       {icon}
     </button>
-  );
+  )
 }

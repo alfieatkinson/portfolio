@@ -1,19 +1,19 @@
-import React from 'react';
-import { lazy } from 'react';
-import clsx from 'clsx';
-import useFadeInMounted from '@/hooks/useFadeInMounted';
+import React from 'react'
+import { lazy } from 'react'
+import clsx from 'clsx'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
 
-const Section = lazy(() => import('@/components/layout/Section'));
-const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'));
-const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'));
-const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'));
-const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'));
-const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'));
-const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon'));
+const Section = lazy(() => import('@/components/layout/Section'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'))
+const SkillsTypewriter = lazy(() => import('@/components/common/SkillsTypewriter'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))
+const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon'))
 
 export default function Hero(): React.JSX.Element {
-  const { animationClass } = useFadeInMounted();
-  const scrollToProjects = (): void => window.location.assign('#projects');
+  const { animationClass } = useFadeInMounted()
+  const scrollToProjects = (): void => window.location.assign('#projects')
 
   return (
     <Section
@@ -57,5 +57,5 @@ export default function Hero(): React.JSX.Element {
         Featured projects
       </PrimaryButton>
     </Section>
-  );
+  )
 }

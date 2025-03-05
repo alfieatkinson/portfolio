@@ -1,26 +1,26 @@
-import React, { lazy, useState, useEffect } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import useFadeInMounted from '@/hooks/useFadeInMounted';
-import clsx from 'clsx';
-import constants from '@/constants';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import React, { lazy, useState, useEffect } from 'react'
+import { Document, Page, pdfjs } from 'react-pdf'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
+import clsx from 'clsx'
+import constants from '@/constants'
+import 'react-pdf/dist/esm/Page/TextLayer.css'
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
-const Section = lazy(() => import('@/components/layout/Section'));
-const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'));
-const DownloadLineIcon = lazy(() => import('remixicon-react/DownloadLineIcon'));
+const Section = lazy(() => import('@/components/layout/Section'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))
+const DownloadLineIcon = lazy(() => import('remixicon-react/DownloadLineIcon'))
 
 export default function Resume(): React.JSX.Element {
-  const { animationClass } = useFadeInMounted();
-  const [pdfUrl, setPdfUrl] = useState<string>('');
-  const [width, setWidth] = useState<number>(400);
+  const { animationClass } = useFadeInMounted()
+  const [pdfUrl, setPdfUrl] = useState<string>('')
+  const [width, setWidth] = useState<number>(400)
 
   useEffect(() => {
-    setPdfUrl(constants.files.resume);
-    setWidth(window.innerWidth);
-  }, []);
+    setPdfUrl(constants.files.resume)
+    setWidth(window.innerWidth)
+  }, [])
 
   return (
     <div className={clsx(animationClass)}>
@@ -39,5 +39,5 @@ export default function Resume(): React.JSX.Element {
         </div>
       </Section>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import UnderlineProps from '@/types/components/UnderlineProps';
+import React from 'react'
+import clsx from 'clsx'
+import UnderlineProps from '@/types/components/UnderlineProps'
 
 export default function SlidingInUnderline({
   children,
@@ -9,10 +9,10 @@ export default function SlidingInUnderline({
 }: UnderlineProps): React.JSX.Element {
   const isPrimary = (type: string | undefined): boolean => {
     if (!type) {
-      return true;
+      return true
     }
-    return type === 'primary';
-  };
+    return type === 'primary'
+  }
 
   return (
     <span className='group/underline relative inline-block'>
@@ -31,5 +31,5 @@ export default function SlidingInUnderline({
         )}
       ></span>
     </span>
-  );
+  )
 }

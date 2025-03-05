@@ -1,9 +1,9 @@
-import React from 'react';
-import { lazy } from 'react';
-import clsx from 'clsx';
-import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps';
+import React from 'react'
+import { lazy } from 'react'
+import clsx from 'clsx'
+import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps'
 
-const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'));
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
 
 export default function PrimaryButton({
   className,
@@ -35,5 +35,5 @@ export default function PrimaryButton({
       {!active && <SlidingInUnderline type='secondary'>{children}</SlidingInUnderline>}
       {active && children}
     </button>
-  );
+  )
 }
