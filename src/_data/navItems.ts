@@ -12,6 +12,10 @@ const navItems: NavItemsProps[] = [
   {
     name: 'Projects',
     href: '/projects'
+  },
+  {
+    name: 'Resume',
+    href: '/resume'
   }
 ]
 
