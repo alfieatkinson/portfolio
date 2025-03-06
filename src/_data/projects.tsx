@@ -24,19 +24,23 @@ const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
 }
 
 const filters: string[] = [
-  'HTML/CSS',
+  'HTML',
+  'CSS',
   'Python',
   'JavaScript',
   'TypeScript',
   'C++',
   'Django',
+  'Flask',
   'React',
+  'Express.js',
+  'Redux',
   'Next.js',
   'Node.js',
+  'MongoDB',
   'PostgreSQL',
   'TailwindCSS',
   'Docker',
-  'CI/CD',
   'Git',
   'RESTful APIs',
   'PyQt',
@@ -54,30 +58,46 @@ const projects: ProjectProps[] = [
     title: 'Open-License Media Web App',
     description:
       'A web application designed for searching, browsing, and managing open-license media, with secure user account management. Built with a TypeScript/React frontend and a Django/PostgreSQL backend.',
-    techStacks: ['TypeScript', 'React', 'Next.js', 'TailwindCSS', 'Django', 'PostgreSQL'],
-    otherTechStacks: ['Python', 'JavaScript', 'Git', 'CI/CD', 'Vercel', 'Heroku'],
+    techStacks: ['TypeScript', 'React', 'Redux', 'Next.js', 'TailwindCSS', 'Django', 'PostgreSQL'],
+    otherTechStacks: ['HTML', 'CSS', 'Python', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
     links: getLinks('Open-License-Media-Web-App'),
   },
   {
-    slug: 'portfolio-website',
+    slug: 'portfolio',
     featured: true,
     title: 'Portfolio Website',
     description:
       'My personal portfolio website built with TypeScript, React, and TailwindCSS, deployed on Vercel.',
-    techStacks: ['TypeScript', 'React', 'TailwindCSS', 'Vercel'],
-    otherTechStacks: ['Git', 'HTML/CSS', 'JavaScript'],
+    techStacks: ['TypeScript', 'React', 'Node.js', 'TailwindCSS'],
+    otherTechStacks: ['Git', 'HTML', 'CSS', 'JavaScript', 'Vercel'],
     category: 'Front-end development',
     links: getLinks('Portfolio-Website', 'https://alfieatkinson.dev'),
+  },
+  {
+    slug: 'portfolio-old',
+    featured: false,
+    title: 'Old Portfolio Website',
+    description: (
+      <span>
+        My previous portfolio website adapted from{' '}
+        <InlineLink href='https://github.com/soumyajit4419/Portfolio'>Soumyajit's design</InlineLink>
+        {' '} using JavaScript, React, Node.js, and Express.js.
+      </span>
+    ),
+    techStacks: ['JavaScript', 'React', 'Node.js', 'Express.js'],
+    otherTechStacks: ['Git', 'HTML', 'CSS', 'Vercel'],
+    category: 'Front-end development',
+    links: getLinks('portfolio-old', 'https://old.alfieatkinson.dev'),
   },
   {
     slug: 'library-management-system',
     featured: true,
     title: 'Library Management System',
     description:
-      'A console-based library management system in C++, featuring concurrent access via sockets and full CRUD functionality. Implemented Test-Driven Development (TDD) with Catch2.',
+      'A console-based library management system in C++, featuring concurrent access via sockets and full CRUD functionality.',
     techStacks: ['C++'],
-    otherTechStacks: ['Git', 'CI/CD'],
+    otherTechStacks: ['Git'],
     category: 'Systems programming',
     links: getLinks('Library-Management-System'),
   },
@@ -89,12 +109,11 @@ const projects: ProjectProps[] = [
       <span>
         A deep-learning sentiment analysis tool using{' '}
         <InlineLink href='https://huggingface.co/docs/transformers/model_doc/bert'>BERT</InlineLink>
-        to analyse social media data in real-time. Integrated Reddit API for fetching and processing
-        user queries.
+        {' '}to analyse social media data in real-time.
       </span>
     ),
-    techStacks: ['Python', 'TensorFlow', 'PyQt', 'Pandas', 'NumPy'],
-    otherTechStacks: ['Git'],
+    techStacks: ['Python', 'TensorFlow', 'Pandas', 'NumPy'],
+    otherTechStacks: ['Git', 'PyQt'],
     category: 'Machine learning',
     links: getLinks('sentiment-analysis-tool'),
   },
@@ -105,7 +124,7 @@ const projects: ProjectProps[] = [
     description:
       'A Python-based interpreter for lambda calculus, implementing symbolic substitution and evaluation to explore functional programming concepts.',
     techStacks: ['Python'],
-    otherTechStacks: ['Git', 'Functional Programming'],
+    otherTechStacks: ['Git'],
     category: 'Computational theory',
     links: getLinks('lambda-calculus-interpreter'),
   },
@@ -115,8 +134,8 @@ const projects: ProjectProps[] = [
     title: 'Sudoku Solver',
     description:
       'A Python script that solves Sudoku puzzles using constraint satisfaction with the Z3 theorem prover, ensuring compliance with Sudoku rules across rows, columns, and subgrids.',
-    techStacks: ['Python', 'Z3 Theorem Prover'],
-    otherTechStacks: ['Git', 'Constraint Satisfaction'],
+    techStacks: ['Python'],
+    otherTechStacks: ['Git'],
     category: 'Algorithms',
     links: getLinks('sudoku-solver'),
   },
