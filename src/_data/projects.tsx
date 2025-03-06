@@ -35,6 +35,7 @@ const filters: string[] = [
   'React',
   'Express.js',
   'Redux',
+  'Redis',
   'Next.js',
   'Node.js',
   'MongoDB',
@@ -58,7 +59,7 @@ const projects: ProjectProps[] = [
     title: 'Open-License Media Web App',
     description:
       'A web application designed for searching, browsing, and managing open-license media, with secure user account management. Built with a TypeScript/React frontend and a Django/PostgreSQL backend.',
-    techStacks: ['TypeScript', 'React', 'Redux', 'Next.js', 'TailwindCSS', 'Django', 'PostgreSQL'],
+    techStacks: ['TypeScript', 'React', 'Redux', 'Next.js', 'TailwindCSS', 'Django', 'Redis', 'PostgreSQL'],
     otherTechStacks: ['HTML', 'CSS', 'Python', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
     links: getLinks('Open-License-Media-Web-App'),
