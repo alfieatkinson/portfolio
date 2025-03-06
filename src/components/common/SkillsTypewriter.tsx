@@ -8,7 +8,7 @@ export default function SkillsTypewriter(): React.JSX.Element {
         strings: [
           'Software Engineer',
           'Full-Stack Developer',
-          'Django & MERN Stack',
+          'MERN & Django Enthusiast',
           'Master of Science in Computer Science',
         ],
         autoStart: true,
