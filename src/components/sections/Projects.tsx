@@ -49,7 +49,9 @@ export default function Projects(): React.JSX.Element {
     <ProjectCard {...project} key={project.id} />
   ))
 
-  const filterEntry: React.JSX.Element[] = filters.map((filter) => (
+  const sortedFilters = filters.sort()
+
+  const filterEntry: React.JSX.Element[] = sortedFilters.map((filter) => (
     <Badge
       key={filter}
       className='animate-fade-in cursor-pointer !delay-200'
