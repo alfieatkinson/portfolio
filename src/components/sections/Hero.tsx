@@ -21,9 +21,9 @@ export default function Hero(): React.JSX.Element {
     >
       <div className='flex h-3/4 flex-col justify-center space-y-4 sm:space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
-          Hello, I am{' '}
+          Hi! I'm{' '}
           <SlidingInUnderline type='secondary' height='lg'>
-            Alfie Atkinson
+            Alfie Atkinson {':)'}
           </SlidingInUnderline>
         </h2>
         <h1
