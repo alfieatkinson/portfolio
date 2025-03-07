@@ -33,10 +33,8 @@ export default function Hero(): React.JSX.Element {
             'break-words font-extrabold tracking-tight',
           )}
         >
-          Rolling nat 20s across the{' '}
-          <HighlightText>full-stack</HighlightText>{' '}
-          and <HighlightText>slaying bugs</HighlightText>{' '}
-          with deployments & dragons.
+          Turning ideas into <HighlightText>scalable web apps</HighlightText>{' '}
+          with code, caffeine, and <HighlightText>continuous learning</HighlightText>.
         </h1>
         <p
           className={clsx(
