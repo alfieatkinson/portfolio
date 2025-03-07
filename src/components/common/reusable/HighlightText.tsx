@@ -21,8 +21,8 @@ export default function HighlightText({ children }: ComponentProps): React.JSX.E
     <span
       ref={ref}
       className={clsx(
-        'from-fuchsia-700 to-purple-700 bg-clip-text',
-        'dark:from-fuchsia-400 dark:to-purple-400',
+        'from-pink-600 to-fuchsia-700 bg-clip-text',
+        'dark:from-fuchsia-500 dark:to-pink-400',
         'text-transparent transition',
       )}
     >

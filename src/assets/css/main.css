@@ -29,11 +29,11 @@
   }
 
   .preloader > svg {
-    stroke: theme(colors.fuchsia.700);
+    stroke: theme(colors.primary.light);
   }
 
   .dark .preloader > svg {
-    stroke: theme(colors.fuchsia.400);
+    stroke: theme(colors.primary.dark);
   }
 
   @media (min-width: theme(screens.sm)) {
@@ -53,17 +53,17 @@
   
   .bg-overlay {
     background: linear-gradient(30deg, #eee6ffe6 33%, #f0e6ff00 66%),
-      linear-gradient(-135deg, #cebaff 10%, #e4dcff 50%, #dfd3ff 100%);
+      linear-gradient(-135deg, #ffadfa 20%, #e6c6ff 80%, #ffffff 100%);
     background-attachment: fixed;
   }  
 
   .bg-dark {
-    background: linear-gradient(-135deg, #4b0082 20%, #290050 50%, #0a001f 100%);
+    background: linear-gradient(-135deg, #663399 20%, #480080 50%, #0a001f 100%);
   }
   
   .bg-overlay-dark {
     background: linear-gradient(30deg, #0a001fe6 10%, #0a001f00 66%),
-      linear-gradient(-135deg, #1e0033 20%, #240046 50%, #000000 100%);
+      linear-gradient(-135deg, #921489 10%, #480080 50%, #000000 100%);
     background-attachment: fixed;
   }
 

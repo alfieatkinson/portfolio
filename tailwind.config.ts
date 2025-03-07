@@ -9,10 +9,10 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: colors.purple['300'],
-          lighter: colors.purple['200'],
-          dark: colors.purple['600'],
-          'lighter-dark': colors.purple['500']
+          light: '#fe1ee3',
+          lighter: '#663399',
+          dark: '#FE1E7E',
+          'lighter-dark': '#663399'
         },
         muted: {
           DEFAULT: colors.slate['300'],

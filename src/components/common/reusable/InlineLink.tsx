@@ -14,7 +14,7 @@ export default function InlineLink({ href, children }: InlineLinkProps): React.J
       className={clsx(
         'cursor-pointer',
         'font-semibold duration-300',
-        'text-primary-dark hover:text-primary-lighter-dark',
+        'text-primary-lighter-dark hover:text-primary-dark',
         'dark:text-primary-light dark:hover:text-primary-lighter',
       )}
     >
