@@ -20,13 +20,13 @@ export default function Hero(): React.JSX.Element {
       className={clsx(animationClass, 'flex h-[88vh] min-h-[480px] flex-col justify-between')}
     >
       <div className='flex h-3/4 flex-col justify-center space-y-4 sm:space-y-6'>
-        <h2 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
+        <h1 className={clsx('animate-fade-in', 'text-xl sm:text-2xl lg:text-3xl')}>
           Hi! I'm{' '}
           <SlidingInUnderline type='secondary' height='lg'>
             Alfie Atkinson {':)'}
           </SlidingInUnderline>
-        </h2>
-        <h1
+        </h1>
+        <h2
           className={clsx(
             'animate-fade-in !delay-200',
             'text-3xl sm:text-5xl lg:text-6xl',
@@ -35,7 +35,7 @@ export default function Hero(): React.JSX.Element {
         >
           Turning ideas into <HighlightText>scalable web apps</HighlightText> with code, caffeine,
           and <HighlightText>continuous learning</HighlightText>.
-        </h1>
+        </h2>
         <p
           className={clsx(
             'animate-fade-in !delay-300',
