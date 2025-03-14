@@ -13,7 +13,7 @@ export default function HomePage(): React.JSX.Element {
   return (
     <>
       <Helmet>
-        <title>Alfie Atkinson | Full-Stack Software Engineer Portfolio</title>
+        <title>Alfie Atkinson | Software Engineer Portfolio</title>
 
         <meta
           name='description'
@@ -25,7 +25,7 @@ export default function HomePage(): React.JSX.Element {
           content="Alfie Atkinson, Software Engineer, Full-Stack Developer, Python, TypeScript, React, Node.js, Django, Portfolio, UK Developer"
         />
 
-        <meta property="og:title" content="Alfie Atkinson | Full-Stack Software Engineer Portfolio" />
+        <meta property="og:title" content="Alfie Atkinson | Software Engineer Portfolio" />
         <meta
           property="og:description"
           content="Discover Alfie Atkinson's portfolio and projects in modern web development and software engineering."
@@ -34,7 +34,7 @@ export default function HomePage(): React.JSX.Element {
         <meta property="og:url" content="https://alfieatkinson.dev" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Alfie Atkinson | Full-Stack Software Engineer Portfolio" />
+        <meta name="twitter:title" content="Alfie Atkinson | Software Engineer Portfolio" />
         <meta
           name="twitter:description"
           content="Discover the innovative work of Alfie Atkinson, a full-stack software engineer. Explore projects, resume, and more."
