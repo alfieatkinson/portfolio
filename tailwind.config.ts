@@ -36,5 +36,6 @@ export default {
       xs: '480px'
     }
   },
-  plugins: []
+  plugins: [],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Purge unused styles
 } satisfies Config
