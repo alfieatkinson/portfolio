@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import constants from '@/constants'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
-import Preloader from '@/components/common/Preloader'  // Import your preloader component
+import Preloader from '@/components/common/Preloader'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -33,9 +33,8 @@ export default function Resume(): React.JSX.Element {
       <Suspense fallback={<Preloader />}>
         <Section className="h-full [&>*]:animate-fade-in">
           <div className="flex justify-center">
-            {/* Add a container for the PDF with min-height to prevent layout shifts */}
             <div style={{ minHeight: loading ? '500px' : 'auto', position: 'relative' }}>
-              {loading && <Preloader />} {/* Show preloader if still loading */}
+              {loading && <Preloader />}
               <Document
                 file={pdfUrl}
                 onLoadSuccess={handleLoadSuccess}  // Handle load success
