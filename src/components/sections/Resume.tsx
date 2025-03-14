@@ -10,6 +10,7 @@ import Preloader from '@/components/common/Preloader'
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
 const Section = lazy(() => import('@/components/layout/Section'))
+const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/buttons/PrimaryButton'))
 const DownloadLineIcon = lazy(() => import('remixicon-react/DownloadLineIcon'))
 
@@ -32,6 +33,12 @@ export default function Resume(): React.JSX.Element {
     <div className={clsx(animationClass)}>
       <Suspense fallback={<Preloader />}>
         <Section className="h-full [&>*]:animate-fade-in">
+          <Heading1
+            className={clsx('animate-fade-in', 'text-primary-dark dark:text-white', 'pb-2 pt-2', 'text-center')}
+          >
+            Resume
+          </Heading1>
+          <p className='animate-fade-in !delay-200 text-center'>My current, professional resume.</p>
           <div className="flex justify-center">
             <div style={{ minHeight: loading ? '500px' : 'auto', position: 'relative' }}>
               {loading && <Preloader />}
