@@ -13,7 +13,11 @@ export default function useIntersectionObserver(
       },
       { rootMargin: '-100px' },
     )
-    ref.current && observer.observe(ref.current)
+    
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
     return (): void => observer.disconnect()
   }, [isIntersecting, ref])
 

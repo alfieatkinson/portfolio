@@ -33,8 +33,8 @@ export default function Hero(): React.JSX.Element {
             'break-words font-extrabold tracking-tight',
           )}
         >
-          Turning ideas into <HighlightText>scalable web apps</HighlightText>{' '}
-          with code, caffeine, and <HighlightText>continuous learning</HighlightText>.
+          Turning ideas into <HighlightText>scalable web apps</HighlightText> with code, caffeine,
+          and <HighlightText>continuous learning</HighlightText>.
         </h1>
         <p
           className={clsx(

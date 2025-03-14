@@ -25,19 +25,40 @@ const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
 
 const filters: string[] = [
   // Core frontend
-  'HTML', 'CSS', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'Redux', 'Zustand', 'TailwindCSS',
+  'HTML',
+  'CSS',
+  'TypeScript',
+  'JavaScript',
+  'React',
+  'Next.js',
+  'Redux',
+  'Zustand',
+  'TailwindCSS',
 
   // Backend & full-stack
-  'Node.js', 'Express.js', 'Django', 'Flask', 'Redis', 'PostgreSQL', 'MongoDB',
+  'Node.js',
+  'Express.js',
+  'Django',
+  'Flask',
+  'Redis',
+  'PostgreSQL',
+  'MongoDB',
 
   // Systems & low-level
-  'C++', 'PyQt',
+  'C++',
+  'PyQt',
 
   // DevOps & deployment
-  'Git', 'Docker', 'Vercel', 'Heroku',
+  'Git',
+  'Docker',
+  'Vercel',
+  'Heroku',
 
   // Machine learning
-  'Python', 'TensorFlow', 'NumPy', 'Pandas',
+  'Python',
+  'TensorFlow',
+  'NumPy',
+  'Pandas',
 
   // Other tools
   'RESTful APIs',
@@ -50,7 +71,17 @@ const projects: ProjectProps[] = [
     title: 'OpenGalaxy',
     description:
       'A web application designed for searching, browsing, and managing open-license media, with secure user account management.',
-    techStacks: ['TypeScript', 'React', 'Next.js', 'Zustand', 'TailwindCSS', 'Django', 'Redis', 'PostgreSQL', 'Docker'],
+    techStacks: [
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Zustand',
+      'TailwindCSS',
+      'Django',
+      'Redis',
+      'PostgreSQL',
+      'Docker',
+    ],
     otherTechStacks: ['HTML', 'CSS', 'Python', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
     links: getLinks('opengalaxy', 'https://opengalaxy.alfieatkinson.dev'),
@@ -73,8 +104,10 @@ const projects: ProjectProps[] = [
     description: (
       <span>
         My previous portfolio website adapted from{' '}
-        <InlineLink href='https://github.com/soumyajit4419/Portfolio'>Soumyajit's design</InlineLink>
-        {' '} using JavaScript, React, Node.js, and Express.js.
+        <InlineLink href='https://github.com/soumyajit4419/Portfolio'>
+          Soumyajit's design
+        </InlineLink>{' '}
+        using JavaScript, React, Node.js, and Express.js.
       </span>
     ),
     techStacks: ['JavaScript', 'React', 'Node.js', 'Express.js'],
@@ -100,8 +133,8 @@ const projects: ProjectProps[] = [
     description: (
       <span>
         A real-time sentiment analysis tool leveraging deep learning and the{' '}
-        <InlineLink href='https://huggingface.co/docs/transformers/model_doc/bert'>BERT</InlineLink>
-        {' '}model to analyse social media data. Features a PyQt-powered GUI for user interaction.
+        <InlineLink href='https://huggingface.co/docs/transformers/model_doc/bert'>BERT</InlineLink>{' '}
+        model to analyse social media data. Features a PyQt-powered GUI for user interaction.
       </span>
     ),
     techStacks: ['Python', 'TensorFlow', 'Pandas', 'NumPy'],
