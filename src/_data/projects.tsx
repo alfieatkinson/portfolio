@@ -24,52 +24,43 @@ const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
 }
 
 const filters: string[] = [
-  'HTML',
-  'CSS',
-  'Python',
-  'JavaScript',
-  'TypeScript',
-  'C++',
-  'Django',
-  'Flask',
-  'React',
-  'Express.js',
-  'Redux',
-  'Redis',
-  'Next.js',
-  'Node.js',
-  'MongoDB',
-  'PostgreSQL',
-  'TailwindCSS',
-  'Docker',
-  'Git',
+  // Core frontend
+  'HTML', 'CSS', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'Redux', 'Zustand', 'TailwindCSS',
+
+  // Backend & full-stack
+  'Node.js', 'Express.js', 'Django', 'Flask', 'Redis', 'PostgreSQL', 'MongoDB',
+
+  // Systems & low-level
+  'C++', 'PyQt',
+
+  // DevOps & deployment
+  'Git', 'Docker', 'Vercel', 'Heroku',
+
+  // Machine learning
+  'Python', 'TensorFlow', 'NumPy', 'Pandas',
+
+  // Other tools
   'RESTful APIs',
-  'PyQt',
-  'TensorFlow',
-  'NumPy',
-  'Pandas',
-  'Heroku',
-  'Vercel',
 ]
 
 const projects: ProjectProps[] = [
   {
-    slug: 'open-license-media-web-app',
+    slug: 'open-galaxy',
     featured: true,
-    title: 'Open-License Media Web App',
+    title: 'OpenGalaxy',
     description:
-      'A web application designed for searching, browsing, and managing open-license media, with secure user account management. Built with a TypeScript/React frontend and a Django/PostgreSQL backend.',
-    techStacks: ['TypeScript', 'React', 'Redux', 'Next.js', 'TailwindCSS', 'Django', 'Redis', 'PostgreSQL'],
+      'A web application designed for searching, browsing, and managing open-license media, with secure user account management.',
+    techStacks: ['TypeScript', 'React', 'Next.js', 'Zustand', 'TailwindCSS', 'Django', 'Redis', 'PostgreSQL', 'Docker'],
     otherTechStacks: ['HTML', 'CSS', 'Python', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
-    links: getLinks('Open-License-Media-Web-App'),
+    links: getLinks('opengalaxy', 'https://opengalaxy.alfieatkinson.dev'),
   },
   {
     slug: 'portfolio',
     featured: true,
     title: 'Portfolio Website',
     description:
-      'My personal portfolio website built with TypeScript, React, and TailwindCSS, deployed on Vercel.',
+      'My personal portfolio website built with TypeScript, React, and TailwindCSS, featuring interactive animations and a responsive UI.',
     techStacks: ['TypeScript', 'React', 'Node.js', 'TailwindCSS'],
     otherTechStacks: ['Git', 'HTML', 'CSS', 'JavaScript', 'Vercel'],
     category: 'Front-end development',
@@ -96,7 +87,7 @@ const projects: ProjectProps[] = [
     featured: true,
     title: 'Library Management System',
     description:
-      'A console-based library management system in C++, featuring concurrent access via sockets and full CRUD functionality.',
+      'A console-based library management system with concurrent access via sockets, implementing multi-threading for efficient CRUD operations.',
     techStacks: ['C++'],
     otherTechStacks: ['Git'],
     category: 'Systems programming',
@@ -108,9 +99,9 @@ const projects: ProjectProps[] = [
     title: 'Sentiment Analysis Tool',
     description: (
       <span>
-        A deep-learning sentiment analysis tool using{' '}
+        A real-time sentiment analysis tool leveraging deep learning and the{' '}
         <InlineLink href='https://huggingface.co/docs/transformers/model_doc/bert'>BERT</InlineLink>
-        {' '}to analyse social media data in real-time.
+        {' '}model to analyse social media data. Features a PyQt-powered GUI for user interaction.
       </span>
     ),
     techStacks: ['Python', 'TensorFlow', 'Pandas', 'NumPy'],
@@ -123,7 +114,7 @@ const projects: ProjectProps[] = [
     featured: false,
     title: 'Lambda Calculus Interpreter',
     description:
-      'A Python-based interpreter for lambda calculus, implementing symbolic substitution and evaluation to explore functional programming concepts.',
+      'A Python interpreter for lambda calculus, featuring symbolic substitution and beta reduction. Designed for exploring functional programming concepts.',
     techStacks: ['Python'],
     otherTechStacks: ['Git'],
     category: 'Computational theory',
@@ -134,7 +125,7 @@ const projects: ProjectProps[] = [
     featured: false,
     title: 'Sudoku Solver',
     description:
-      'A Python script that solves Sudoku puzzles using constraint satisfaction with the Z3 theorem prover, ensuring compliance with Sudoku rules across rows, columns, and subgrids.',
+      'A Python-based Sudoku solver using constraint satisfaction and the Z3 theorem prover for efficient rule-based solving.',
     techStacks: ['Python'],
     otherTechStacks: ['Git'],
     category: 'Algorithms',
