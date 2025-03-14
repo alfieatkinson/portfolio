@@ -38,24 +38,29 @@ export default function ProjectCard({
     ),
   )
 
+  const linkUrl =
+    links.find(({ label }) => label === 'Source Code')?.url ??
+    links.find(({ label }) => label === 'Live Demo')?.url
+
   return (
     <Card className='flex flex-col justify-between'>
       <header>
         <Heading3>
-          <a
-            href={
-              links.find(({ label }) => label === 'Source code')?.url ??
-              links.find(({ label }) => label === 'Live')?.url
-            }
-            className={clsx(
-              'no-default z-0',
-              'group-hover:text-primary-dark group-hover:dark:text-primary-light',
-            )}
-            target='_blank'
-            rel='noreferrer'
-          >
-            {title}
-          </a>
+          {linkUrl ? (
+            <a
+              href={linkUrl}
+              className={clsx(
+                'no-default z-0',
+                'group-hover:text-primary-dark group-hover:dark:text-primary-light',
+              )}
+              target='_blank'
+              rel='noreferrer'
+            >
+              {title}
+            </a>
+          ) : (
+            <span className='text-muted-dark dark:text-muted'>{title}</span>
+          )}
         </Heading3>
         <p className='text-muted-dark dark:text-muted'>{description}</p>
       </header>
