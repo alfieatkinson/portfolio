@@ -37,5 +37,4 @@ export default {
     }
   },
   plugins: [],
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Purge unused styles
 } satisfies Config
