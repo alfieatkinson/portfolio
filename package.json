@@ -10,8 +10,7 @@
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint src --fix",
-    "audit": "lighthouse http://localhost:5173 --view --output html --output-path ./lighthouse-report.html", 
-    "postbuild": "npm run audit" 
+    "audit": "lighthouse http://localhost:5173 --view --output html --output-path ./lighthouse-report.html"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
