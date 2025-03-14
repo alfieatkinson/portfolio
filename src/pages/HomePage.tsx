@@ -16,8 +16,26 @@ export default function HomePage(): React.JSX.Element {
         <title>Alfie Atkinson | Software Engineer</title>
         <meta
           name='description'
-          content='Alfie Atkinson is a UK-based software engineer specialising in full-stack web development with React, Django, and Node.js.'
+          content='Alfie Atkinson is a UK-based software engineer specialising in full-stack web development with Python, TypeScript, MERN, and Django. Explore his portfolio and projects.'
         />
+        <meta
+          name='keywords'
+          content='Alfie Atkinson, Software Engineer, Full Stack Developer, Python, TypeScript, React, Node.js, Django, MongoDB, SQL, DevOps, Web Developer, UK Developer, Portfolio'
+        />
+        <meta property="og:title" content="Alfie Atkinson | Software Engineer" />
+        <meta
+          property="og:description"
+          content="Explore Alfie Atkinson's portfolio showcasing his work in full-stack development, web applications, and more."
+        />
+        <meta property="og:image" content="URL_to_image" />
+        <meta property="og:url" content="https://alfieatkinson.dev" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Alfie Atkinson | Software Engineer" />
+        <meta
+          name="twitter:description"
+          content="Explore Alfie Atkinson's portfolio showcasing his work in full-stack development, web applications, and more."
+        />
+        <meta name="twitter:image" content="URL_to_image" />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>

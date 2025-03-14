@@ -13,6 +13,28 @@ export default function NotFoundPage(): React.JSX.Element {
     <>
       <Helmet>
         <title>Page Not Found | Alfie Atkinson</title>
+        <meta
+          name='description'
+          content="Sorry, the page you're looking for doesn't exist. It may have been moved or deleted. Check out other pages on my portfolio."
+        />
+        <meta
+          name='keywords'
+          content='404, Not Found, Page Not Found, Error, Alfie Atkinson, Portfolio, Software Engineer'
+        />
+        <meta property="og:title" content="Page Not Found | Alfie Atkinson" />
+        <meta
+          property="og:description"
+          content="Sorry, the page you're looking for doesn't exist. It may have been moved or deleted. Check out other pages on my portfolio."
+        />
+        <meta property="og:image" content="URL_to_image" />
+        <meta property="og:url" content="https://alfieatkinson.dev/404" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Page Not Found | Alfie Atkinson" />
+        <meta
+          name="twitter:description"
+          content="Sorry, the page you're looking for doesn't exist. It may have been moved or deleted. Check out other pages on my portfolio."
+        />
+        <meta name="twitter:image" content="URL_to_image" />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>

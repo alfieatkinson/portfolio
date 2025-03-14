@@ -16,8 +16,26 @@ export default function AboutPage(): React.JSX.Element {
         <title>Projects | Alfie Atkinson</title>
         <meta
           name='description'
-          content="Explore Alfie Atkinson's latest projects, including machine learning, web development, and more."
+          content="Explore Alfie Atkinson's portfolio of projects, including web development, machine learning, AI tools, and software engineering."
         />
+        <meta
+          name='keywords'
+          content='Alfie Atkinson, Software Engineer, Projects, Web Development, Machine Learning, Python, TypeScript, AI, React, Django, Node.js, MongoDB, SQL, DevOps, Portfolio'
+        />
+        <meta property="og:title" content="Projects | Alfie Atkinson" />
+        <meta
+          property="og:description"
+          content="Explore a diverse range of projects from Alfie Atkinson, showcasing expertise in full-stack development, AI, machine learning, and more."
+        />
+        <meta property="og:image" content="URL_to_image" />
+        <meta property="og:url" content="https://alfieatkinson.dev/projects" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects | Alfie Atkinson" />
+        <meta
+          name="twitter:description"
+          content="Explore a diverse range of projects from Alfie Atkinson, showcasing expertise in full-stack development, AI, machine learning, and more."
+        />
+        <meta name="twitter:image" content="URL_to_image" />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>
