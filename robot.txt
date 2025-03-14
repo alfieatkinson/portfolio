@@ -1,0 +1,6 @@
+# Allow all bots to crawl the entire site
+User-agent: *
+Disallow:
+
+# Specify the location of the sitemap
+Sitemap: https://alfieatkinson.dev/sitemap.xml
