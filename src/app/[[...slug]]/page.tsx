@@ -1,9 +1,10 @@
 import '@/assets/css/main.css'
+import { ClientOnly } from '@/app/[[...slug]]/client'
 
 export function generateStaticParams() {
-  return [{ slug: [''] }];
+  return [{ slug: [''] }]
 }
 
 export default function Page() {
-  return '...'; // You'll update this later
+  return <ClientOnly /> // You'll update this later
 }
