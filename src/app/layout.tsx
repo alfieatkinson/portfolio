@@ -1,9 +1,12 @@
 import { Metadata } from 'next'
 
+export const viewport = {
+  themeColor: "#480080",
+}
+
 export const metadata: Metadata = {
   title: "Alfie Atkinson | Software Engineer Portfolio",
   description: "Portfolio site of Alfie Atkinson, showcasing software engineering projects and experience.",
-  themeColor: "#480080",
   applicationName: "Alfie Atkinson Portfolio",
   icons: {
     icon: "/favicon.ico",
