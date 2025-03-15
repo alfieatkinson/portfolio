@@ -2,7 +2,12 @@ import '@/assets/css/main.css'
 import { ClientOnly } from '@/app/[[...slug]]/client'
 
 export function generateStaticParams() {
-  return [{ slug: [''] }]
+  return [
+    { slug: [''] },
+    { slug: ['about'] },
+    { slug: ['projects'] },
+    { slug: ['resume'] },
+  ]
 }
 
 export default function Page() {
