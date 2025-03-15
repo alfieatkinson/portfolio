@@ -11,8 +11,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
           as="style"
         />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#110627" />
         <link rel="icon" href="/favicon.ico" />
