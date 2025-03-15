@@ -26,6 +26,6 @@
     },
     "typeRoots": ["node_modules/@types", "d.ts"]
   },
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["./src",  "./dist/types/**/*.ts", "./next-env.d.ts"],
   "exclude": ["vite.config.d.ts"]
 }
