@@ -4,6 +4,7 @@ import Router from '@/router'
 import checkDarkTheme from '@/utils/checkDarkTheme'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { BrowserRouter } from 'react-router-dom'
 
 const ScrollToTop = lazy(() => import('@/components/common/ScrollToTop'))
 const ScrollToTopFAB = lazy(() => import('@/components/common/ScrollToTopFAB'))
@@ -18,12 +19,14 @@ export default function App(): React.JSX.Element {
   }, [])
 
   return (
-    <>
-      <Router />
-      <ScrollToTop />
-      <ScrollToTopFAB />
-      <Analytics />
-      <SpeedInsights />
-    </>
+    <BrowserRouter>
+      <>
+        <Router />
+        <ScrollToTop />
+        <ScrollToTopFAB />
+        <Analytics />
+        <SpeedInsights />
+      </>
+    </BrowserRouter>
   )
 }
