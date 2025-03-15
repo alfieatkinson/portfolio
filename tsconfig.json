@@ -24,7 +24,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "typeRoots": ["node_modules/@types", "d.ts"]
+    "typeRoots": ["node_modules/@types", "d.ts"],
+    "plugins": [{ "name": "next" }]
   },
   "include": ["./src",  "./dist/types/**/*.ts", "./next-env.d.ts"],
   "exclude": ["./node_modules"]
