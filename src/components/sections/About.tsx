@@ -1,8 +1,6 @@
-import React from 'react'
-import { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from 'react'
 import clsx from 'clsx'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
-import ComponentProps from '@/types/components/ComponentProps'
 import Preloader from '@/components/common/Preloader'
 
 const Heading1 = lazy(() => import('@/components/common/reusable/headings/Heading1'))
@@ -14,7 +12,11 @@ const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
 const Section = lazy(() => import('@/components/layout/Section'))
 const ReactMarkdown = lazy(() => import('react-markdown'))
 
-export default function About({ children }: ComponentProps): React.JSX.Element {
+type AboutProps = {
+  aboutContent: string
+}
+
+export default function AboutPage({ aboutContent }: AboutProps): React.JSX.Element {
   const { animationClass } = useFadeInMounted()
 
   return (
@@ -41,10 +43,22 @@ export default function About({ children }: ComponentProps): React.JSX.Element {
               ),
             }}
           >
-            {(localStorage.about as string) ?? children}
+            {aboutContent}
           </ReactMarkdown>
         </Section>
       </Suspense>
     </div>
   )
+}
+
+// This function runs at build time
+export async function getStaticProps() {
+  // Static import of the markdown file during build time
+  const aboutContent = await import('@/_data/about.md')
+
+  return {
+    props: {
+      aboutContent: aboutContent.default, // Extract the content from the .md file
+    },
+  }
 }
