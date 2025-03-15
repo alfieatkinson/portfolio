@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import socialList from '@/_data/social.tsx'
+import socialList from '@/_data/social'
 import ComponentProps from '@/types/components/ComponentProps'
 import SocialProps from '@/types/SocialProps'
 

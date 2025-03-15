@@ -1,39 +1,24 @@
 import React from 'react'
-import { lazy, Suspense, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import about from '@/_data/about.md'
-import Preloader from '@/components/common/Preloader'
+import PageWrapper from '@/components/layout/PageWrapper'
+import Navbar from '@/components/layout/Navbar'
+import About from '@/components/sections/About'
+import Footer from '@/components/layout/Footer'
 
-const PageWrapper = lazy(() => import('@/components/layout/PageWrapper'))
-const Navbar = lazy(() => import('@/components/layout/Navbar'))
-const About = lazy(() => import('@/components/sections/About'))
-const Footer = lazy(() => import('@/components/layout/Footer'))
+type AboutPageProps = {
+  aboutContent: string
+}
 
-export default function AboutPage(): React.JSX.Element {
-  const [content, setContent] = useState<string>('')
-
-  useEffect((): void => {
-    fetch(about as RequestInfo)
-      .then((response: Response): Promise<string> => response.text())
-      .then((text: string): void => {
-        setContent(text)
-        localStorage.about = text
-      })
-      .catch((): void => setContent('Failed to load content. Please reload the page!'))
-  }, [content])
-
+export default function AboutPage({ aboutContent }: AboutPageProps): React.JSX.Element {
   return (
     <>
       <Helmet>
-      <title>About | Alfie Atkinson</title>
+        <title>About | Alfie Atkinson</title>
         <meta
-          name='description'
+          name="description"
           content="Learn about Alfie Atkinson, a passionate UK-based full-stack software engineer with expertise in Python, TypeScript, MERN, Django, and DevOps. Discover my journey and background."
         />
-        <meta
-          name='keywords'
-          content="Alfie Atkinson, Software Engineer, Full-Stack Developer, About Alfie, Python, TypeScript, React, Django, DevOps, Portfolio, UK Developer, Biography"
-        />
+        <meta name="keywords" content="Alfie Atkinson, Software Engineer, Full-Stack Developer, About Alfie, Python, TypeScript, React, Django, DevOps, Portfolio, UK Developer, Biography" />
         <meta property="og:title" content="About | Alfie Atkinson" />
         <meta
           property="og:description"
@@ -52,13 +37,23 @@ export default function AboutPage(): React.JSX.Element {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
-      <Suspense fallback={<Preloader />}>
-        <PageWrapper>
-          <Navbar />
-          <About children={content} />
-          <Footer />
-        </PageWrapper>
-      </Suspense>
+      <PageWrapper>
+        <Navbar />
+        {/* Pass the static Markdown content to the About component */}
+        <About>{aboutContent}</About>
+        <Footer />
+      </PageWrapper>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // Load the Markdown content at build time
+  const aboutContent = await import('@/_data/about.md')
+  
+  return {
+    props: {
+      aboutContent: aboutContent.default, // Ensure your .d.ts declares this as a string
+    },
+  }
 }

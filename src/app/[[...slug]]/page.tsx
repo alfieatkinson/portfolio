@@ -3,7 +3,7 @@ import { ClientOnly } from '@/app/[[...slug]]/client'
 
 export function generateStaticParams() {
   return [
-    { slug: [''] },
+    { slug: [] },
     { slug: ['about'] },
     { slug: ['projects'] },
     { slug: ['resume'] },
