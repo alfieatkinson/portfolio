@@ -17,34 +17,34 @@ export default function HomePage(): React.JSX.Element {
 
         <meta
           name='description'
-          content="Discover Alfie Atkinson, a UK-based full-stack software engineer specialising in Python, TypeScript, MERN, and Django. Explore my projects, resume, and portfolio."
+          content='Discover Alfie Atkinson, a UK-based full-stack software engineer specialising in Python, TypeScript, MERN, and Django. Explore my projects, resume, and portfolio.'
         />
 
         <meta
           name='keywords'
-          content="Alfie Atkinson, Software Engineer, Full-Stack Developer, Python, TypeScript, React, Node.js, Django, Portfolio, UK Developer"
+          content='Alfie Atkinson, Software Engineer, Full-Stack Developer, Python, TypeScript, React, Node.js, Django, Portfolio, UK Developer'
         />
 
-        <meta property="og:title" content="Alfie Atkinson | Software Engineer Portfolio" />
+        <meta property='og:title' content='Alfie Atkinson | Software Engineer Portfolio' />
         <meta
-          property="og:description"
+          property='og:description'
           content="Discover Alfie Atkinson's portfolio and projects in modern web development and software engineering."
         />
-        <meta property="og:image" content="https://alfieatkinson.dev/headshot.jpg" />
-        <meta property="og:url" content="https://alfieatkinson.dev" />
+        <meta property='og:image' content='https://alfieatkinson.dev/headshot.jpg' />
+        <meta property='og:url' content='https://alfieatkinson.dev' />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Alfie Atkinson | Software Engineer Portfolio" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Alfie Atkinson | Software Engineer Portfolio' />
         <meta
-          name="twitter:description"
-          content="Discover the innovative work of Alfie Atkinson, a full-stack software engineer. Explore projects, resume, and more."
+          name='twitter:description'
+          content='Discover the innovative work of Alfie Atkinson, a full-stack software engineer. Explore projects, resume, and more.'
         />
-        <meta name="twitter:image" content="https://alfieatkinson.dev/headshot.jpg" />
+        <meta name='twitter:image' content='https://alfieatkinson.dev/headshot.jpg' />
 
-        <link rel="canonical" href="https://alfieatkinson.dev" />
+        <link rel='canonical' href='https://alfieatkinson.dev' />
 
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='robots' content='index, follow' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>

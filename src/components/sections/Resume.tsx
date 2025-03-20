@@ -26,33 +26,43 @@ export default function Resume(): React.JSX.Element {
   }, [])
 
   const handleLoadSuccess = () => {
-    setLoading(false)  // Set loading to false when PDF is fully loaded
+    setLoading(false) // Set loading to false when PDF is fully loaded
   }
 
   return (
     <div className={clsx(animationClass)}>
       <Suspense fallback={<Preloader />}>
-        <Section className="h-full [&>*]:animate-fade-in">
+        <Section className='h-full [&>*]:animate-fade-in'>
           <Heading1
-            className={clsx('animate-fade-in', 'text-primary-dark dark:text-white', 'pb-2 pt-2', 'text-center')}
+            className={clsx(
+              'animate-fade-in',
+              'text-primary-dark dark:text-white',
+              'pb-2 pt-2',
+              'text-center',
+            )}
           >
             Resume
           </Heading1>
           <p className='animate-fade-in !delay-200 text-center'>My current, professional resume.</p>
-          <div className="flex justify-center">
+          <div className='flex justify-center'>
             <div style={{ minHeight: loading ? '500px' : 'auto', position: 'relative' }}>
               {loading && <Preloader />}
               <Document
                 file={pdfUrl}
-                onLoadSuccess={handleLoadSuccess}  // Handle load success
-                className="d-flex justify-content-center"
+                onLoadSuccess={handleLoadSuccess} // Handle load success
+                className='d-flex justify-content-center'
               >
                 <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
               </Document>
             </div>
           </div>
-          <a className="flex justify-center" href={pdfUrl} target="_blank" rel="noopener noreferrer">
-            <PrimaryButton className="my-8" icon={<DownloadLineIcon size={20} />} inverted>
+          <a
+            className='flex justify-center'
+            href={pdfUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <PrimaryButton className='my-8' icon={<DownloadLineIcon size={20} />} inverted>
               Download Resume
             </PrimaryButton>
           </a>

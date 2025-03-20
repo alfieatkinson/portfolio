@@ -12,32 +12,32 @@ export default function AboutPage(): React.JSX.Element {
   return (
     <>
       <Helmet>
-      <title>Resume | Alfie Atkinson</title>
+        <title>Resume | Alfie Atkinson</title>
         <meta
           name='description'
-          content="View the professional resume of Alfie Atkinson, a full-stack software engineer with extensive experience in Python, TypeScript, React, and DevOps. See my career journey and technical expertise."
+          content='View the professional resume of Alfie Atkinson, a full-stack software engineer with extensive experience in Python, TypeScript, React, and DevOps. See my career journey and technical expertise.'
         />
         <meta
           name='keywords'
-          content="Alfie Atkinson, Resume, Software Engineer, Full-Stack Developer, Career, Python, TypeScript, React, DevOps, Portfolio, UK Developer"
+          content='Alfie Atkinson, Resume, Software Engineer, Full-Stack Developer, Career, Python, TypeScript, React, DevOps, Portfolio, UK Developer'
         />
-        <meta property="og:title" content="Resume | Alfie Atkinson" />
+        <meta property='og:title' content='Resume | Alfie Atkinson' />
         <meta
-          property="og:description"
-          content="Explore the resume of Alfie Atkinson, detailing his professional experience, technical skills, and career achievements as a full-stack software engineer."
+          property='og:description'
+          content='Explore the resume of Alfie Atkinson, detailing his professional experience, technical skills, and career achievements as a full-stack software engineer.'
         />
-        <meta property="og:image" content="https://alfieatkinson.dev/headshot.jpg" />
-        <meta property="og:url" content="https://alfieatkinson.dev/resume" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Resume | Alfie Atkinson" />
+        <meta property='og:image' content='https://alfieatkinson.dev/headshot.jpg' />
+        <meta property='og:url' content='https://alfieatkinson.dev/resume' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Resume | Alfie Atkinson' />
         <meta
-          name="twitter:description"
+          name='twitter:description'
           content="Discover Alfie Atkinson's professional journey and technical expertise in full-stack development, showcased in his detailed resume."
         />
-        <meta name="twitter:image" content="https://alfieatkinson.dev/headshot.jpg" />
-        <link rel="canonical" href="https://alfieatkinson.dev/resume" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='twitter:image' content='https://alfieatkinson.dev/headshot.jpg' />
+        <link rel='canonical' href='https://alfieatkinson.dev/resume' />
+        <meta name='robots' content='index, follow' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>
