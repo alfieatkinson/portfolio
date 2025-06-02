@@ -39,6 +39,7 @@ const filters: string[] = [
   'Node.js',
   'Express.js',
   'Django',
+  'Django REST Framework',
   'Flask',
   'Redis',
   'PostgreSQL',
@@ -47,6 +48,12 @@ const filters: string[] = [
   // Systems & low-level
   'C++',
   'PyQt',
+
+  // Testing
+  'Catch2',
+  'Jest',
+  'Pytest',
+  'Cypress',
 
   // DevOps & deployment
   'Git',
@@ -66,7 +73,7 @@ const filters: string[] = [
 
 const projects: ProjectProps[] = [
   {
-    slug: 'open-galaxy',
+    slug: 'opengalaxy',
     featured: true,
     title: 'OpenGalaxy',
     description:
@@ -75,14 +82,14 @@ const projects: ProjectProps[] = [
       'TypeScript',
       'React',
       'Next.js',
-      'Zustand',
       'TailwindCSS',
+      'Cypress',
       'Django',
       'Redis',
       'PostgreSQL',
       'Docker',
     ],
-    otherTechStacks: ['HTML', 'CSS', 'Python', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
+    otherTechStacks: ['HTML', 'CSS', 'Python', 'Django REST Framework', 'JavaScript', 'Git', 'Vercel', 'Heroku'],
     category: 'Full-stack development',
     links: getLinks('opengalaxy', 'https://opengalaxy.alfieatkinson.dev'),
   },
@@ -121,7 +128,7 @@ const projects: ProjectProps[] = [
     title: 'Library Management System',
     description:
       'A console-based library management system with concurrent access via sockets, implementing multi-threading for efficient CRUD operations.',
-    techStacks: ['C++'],
+    techStacks: ['C++', 'Catch2'],
     otherTechStacks: ['Git'],
     category: 'Systems programming',
     links: getLinks('Library-Management-System'),
